@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	‹meta charset="UTF-8">
+	‹meta name="viewport" content-"width=device=wridth, initial-scale=1.0">
+	<title>Cookie Example</title>
+	<script>
+		
+	function setCookie(name, value, days) {
+		const date = new Date();
+		date.setTime(date.getTime()+(days * 24 * 60 *60 * 1000));
+		const expires = "expires=" + date.toUTCString();
+		document.cookie = name + "=" + value + ";" + expires + ";parh=/";
+	}
+
+
+	function setStudentCookie() {
+	const lastName = "BIRYUKOVA";
+	setCookie("student", lastName, 3);
+	alert("Cookie установлено: " + document.cookie);
+	
+	}
+	
+	</script>
+</head>
+<body onload ="setStudentCookie()">
+	<h1>BIRYUKOVA 21SH1 Cookie!</h1>
+	<р>cookie. </p>
+</body>
+</html>
